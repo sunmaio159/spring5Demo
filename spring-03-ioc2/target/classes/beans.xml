@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 使用spring来创建对象，在spring中都称为Bean -->
+    <!-- 第一种，下表赋值 -->
+    <!--<bean id="user" class="com.sun.pojo.User">
+        <constructor-arg index="0" value="zhangsan"></constructor-arg>
+    </bean>-->
+
+    <!-- 第二种，类型创建，不建议使用 -->
+   <!-- <bean id="user" class="com.sun.pojo.User">
+        <constructor-arg type="java.lang.String" value="张三"></constructor-arg>
+    </bean>-->
+
+    <!-- 第三种，直接通过参数名来设置 -->
+    <bean id="user" class="com.sun.pojo.User">
+        <constructor-arg name="name" value="李四"></constructor-arg>
+    </bean>
+</beans>
